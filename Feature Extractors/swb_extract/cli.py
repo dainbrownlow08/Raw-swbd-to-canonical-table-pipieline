@@ -216,7 +216,6 @@ def cmd_features(args: argparse.Namespace) -> int:
         loudness,
         overlap,
         overlap_split,
-        personal_focus_score,
         pitch,
         pronoun_per_second,
         pronoun_rate,
@@ -264,8 +263,6 @@ def cmd_features(args: argparse.Namespace) -> int:
         return word_rate.run(args)
     if args.name == token_count.FEATURE_NAME:
         return token_count.run(args)
-    if args.name == personal_focus_score.FEATURE_NAME:
-        return personal_focus_score.run(args)
     if args.name == latching_flag.FEATURE_NAME:
         return latching_flag.run(args)
     if args.name == laughter.FEATURE_NAME:
